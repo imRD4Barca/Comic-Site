@@ -1,0 +1,394 @@
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        /* Stack nav items vertically */
+        align-items: center;
+        /* Center nav items */
+        gap: 15px;
+        /* Spacing between items */
+        margin-top: 15px;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        /* Bigger font for easier tap */
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    a.comic-card {
+        width: 45%;
+        /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    a.comic-card {
+        width: 90%;
+        /* Full width cards on small phones */
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 0.8rem;
+        padding: 10px 1rem;
+    }
+}
+
+/* Reset some basic stuff */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Base styles */
+body {
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #1f1f1f;
+    padding: 20px 0;
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #facc15;
+    text-align: center;
+}
+
+.logo {
+    text-decoration: none;
+    margin: 0%;
+    display: inline-flex;
+}
+
+.logo-txt {
+    color: #ff003c;
+    font-size: 2.9rem;
+    font-weight: 900;
+    text-decoration: none;
+    animation: gradientShift 5s ease infinite,
+        bloodDrip 0.6s ease-out forwards,
+        flicker 1s infinite;
+    text-shadow: 0 0 4px red;
+    margin-right: 10px;
+}
+
+.logo:hover .logo-txt {
+    text-shadow: 0 0 10px red, 0 0 20px darkred;
+    animation: gradientShift 5s ease infinite,
+        bloodDrip 0.6s ease-out forwards,
+        flicker 1s infinite;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 10px red);
+    transition: transform 0.6s ease;
+    margin-top: 1%;
+    gap: auto;
+}
+
+.logo:hover .logo-img {
+    transform: rotate(360deg) scale(-1.5);
+    filter: drop-shadow(0 0 20px red);
+}
+
+.containers {
+    display: flex;
+    justify-content: space-evenly;
+    vertical-align: middle;
+}
+
+nav ul {
+    display: flex;
+    vertical-align: middle;
+    margin-top: 20px;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f44336;
+    text-shadow: 0 0 8px red;
+}
+
+.contact-container {
+    position: relative;
+    display: inline-block;
+}
+
+.contact-icon {
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-icon:hover {
+    color: #f44336;
+    text-shadow: 0 0 5px crimson;
+}
+
+.contact-popup {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 160px;
+}
+
+.contact-popup a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.contact-popup a:hover {
+    text-decoration: underline;
+    color: #1da1f2;
+}
+
+.contact-container:hover .contact-popup {
+    display: block;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(to right, #1e293b, #0f172a);
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 20px;
+    border-top: 2px solid #444;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #facc15;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+/* Comic Cards */
+.comic-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comic-cards .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Base card style */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.comic-card {
+    display: block;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+    text-align: center;
+    width: 300px;
+    color: white;
+    text-decoration: none;
+
+    /* smooth transform + shadow + border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.comic-card h3 {
+    margin-top: 30px;
+    color: crimson;
+}
+
+.comic-card img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.comic-card p {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.tags {
+    margin-bottom: 10px;
+}
+
+.tags span {
+    display: inline-block;
+    background: transparent;
+    color: crimson;
+    text-shadow: 0 0 5px crimson;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Voting Buttons */
+.vote-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.vote-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.vote-read {
+    background-color: #22c55e;
+    color: #fff;
+}
+
+.vote-read:hover {
+    background-color: #16a34a;
+}
+
+.vote-nah {
+    background-color: #ef4444;
+    color: #fff;
+}
+
+.vote-nah:hover {
+    background-color: #b91c1c;
+}
+
+/* Hover effect per card */
+.comic-card:hover {
+    background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+    box-shadow: 0 0 20px crimson;
+    transform: scale(1.05);
+}
+
+.comic-card:hover h3 {
+    filter: drop-shadow(0 0 20px crimson);
+    animation: flicker 1s infinite;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #1f1f1f;
+    margin-top: 40px;
+    border-top: 2px solid #444;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes bloodDrip {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+        filter: blur(3px);
+    }
+
+    30% {
+        opacity: 0.3;
+        filter: blur(1.5px);
+    }
+
+    60% {
+        transform: translateY(5px);
+        opacity: 0.8;
+        filter: blur(0.5px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.85;
+    }
+
+    80% {
+        opacity: 0.95;
+    }
+}

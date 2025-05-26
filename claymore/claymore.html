@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Claymore</title>
+    <link rel="stylesheet" href="../all/style.css" />
+    <link rel="icon" type="image/png" href="../glow_only_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" target="_blank"><img src="../glow_only_logo.png" class="logo-img"
+                    alt="Cultured Comic Logo"><span class="logo-txt">Cultured Comic</span> </a>
+            <ul class="nav-links">
+                <li><a href="../index.html" target="_blank">Home</a></li>
+                <li><a href="#extra-info">About</a></li>
+                <li><a href="#ratings-section">Reviews</a></li>
+                <li><a href="#genres-section">Genres</a></li>
+                <li class="contact-container">
+                    <span class="contact-icon">
+                        Contact
+                    </span>
+                    <div class="contact-popup">
+                        <a href="https://www.instagram.com/rdeb4barca" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.linkedin.com/in/Rahul Deb" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="mailto:rdrahuldeb93@gmail.com">
+                            <i class="fas fa-envelope"></i> Gmail
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="main-heading">
+        <h1>Claymore</h1>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="images/claymore1.jpg" alt="Panel 1" />
+            <div class="caption">"In a world of monsters, only the strong survive."</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/claymore2.jpg" alt="Panel 2" />
+            <div class="caption">"Silver-eyed warriors walk the line between human and beast."</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/claymore3.jpg" alt="Panel 3" />
+            <div class="caption">"Once innocent, now the most feared awakened being."</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/claymore4.jpg" alt="Panel 4" />
+            <div class="caption">"Swords clash in the shadows of a dark fantasy world."</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/claymore_group.jpg" alt="Panel 5" />
+            <div class="caption">"Sisterhood forged in battle."</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <section class="description">
+        <p>
+            <strong>Claymore</strong> is a dark fantasy manga by <strong>Norihiro Yagi</strong>.<br>
+            In a world plagued by shape-shifting monsters called Yoma, half-human, half-Yoma warriors known as Claymores
+            fight to protect humanity.<br>
+            The story follows <strong>Clare</strong>, a determined Claymore, as she seeks vengeance and uncovers the
+            secrets of her organization.<br>
+            With intense battles, tragic pasts, and themes of identity and sacrifice, Claymore delivers a gripping and
+            emotional journey.
+        </p>
+    </section>
+    <!-- Tribute and Extra Info Section -->
+    <div class="extra-info-container" id="extra-info">
+        <!-- Characters Section with Heading -->
+        <div class="character-section">
+            <h2 class="section-heading">Main Characters</h2>
+            <div class="characters">
+                <div class="character">
+                    <img src="images/claire.png" alt="Claire">
+                    <p class="char-name">Claire</p>
+                    <div class="char-desc">The main protagonist, a determined Claymore with a tragic past and a
+                        relentless drive for revenge.</div>
+                </div>
+                <div class="character">
+                    <img src="images/teresa.jpg" alt="Teresa">
+                    <p class="char-name">Teresa</p>
+                    <div class="char-desc">Known as Teresa of the Faint Smile, she is one of the most powerful and
+                        compassionate Claymores.</div>
+                </div>
+                <div class="character">
+                    <img src="images/priscilla.jpg" alt="Priscilla">
+                    <p class="char-name">Priscilla</p>
+                    <div class="char-desc">A once-promising Claymore whose tragic transformation sets the story in
+                        motion.</div>
+                </div>
+                <div class="character">
+                    <img src="images/jeanne.jpg" alt="Jeanne">
+                    <p class="char-name">Jeanne</p>
+                    <div class="char-desc">A loyal and courageous Claymore, respected for her sense of honor and
+                        sacrifice.</div>
+                </div>
+                <div class="character">
+                    <img src="images/rafaela.webp" alt="Rafaela">
+                    <p class="char-name">Rafaela</p>
+                    <div class="char-desc">A mysterious Claymore with a complex connection to the organization's
+                        secrets.</div>
+                </div>
+                <div class="character">
+                    <img src="images/helen.jpg" alt="Helen">
+                    <p class="char-name">Helen</p>
+                    <div class="char-desc">A brash and skilled fighter, known for her sharp tongue and loyalty to her
+                        comrades.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Norihiro Yagi -->
+        <div class="tribute-section">
+            <img src="images/yagi.jpg" alt="Norihiro Yagi">
+            <h3 class="char-name">Norihiro Yagi</h3>
+            <p class="mangaka-permanent-desc">The creator of Claymore, known for his dark storytelling and dynamic
+                action scenes.</p>
+
+            <div class="mangaka-desc">
+                <strong>Norihiro Yagi</strong> is the author and artist of <strong>Claymore</strong>, acclaimed for its
+                unique blend of action, emotion, and dark fantasy.<br>
+                Yagi is also known for his earlier work <strong>Angel Densetsu</strong>, a comedy manga, showcasing his
+                range as a storyteller.<br>
+                <br>
+                <p><u>In the words of <strong>Yagi</strong>:</u></p>
+                <blockquote>
+                    <strong>"Even in darkness, a blade of hope can shine."</strong>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- Genre and Links -->
+    <section class="below-characters">
+        <div class="genres" id="genres-section">
+            <h3>📚 Genre:</h3>
+            <p> Seinen, Dark Fantasy, Action, Drama </p>
+            <p><strong>Claymore</strong> began serialization in <strong>2001</strong>.</p>
+            <p><em>Status:</em> Completed</p>
+            <p><strong>Chapters Published:</strong> 155</p>
+        </div>
+
+        <div class="links">
+            <h3>📖 Where to Read:</h3>
+            <a href="https://www.natomanga.com/manga/claymore" target="_blank">Read Claymore Online</a><br>
+            <a href="https://www.amazon.com/Claymore-Vol-1-Norihiro-Yagi/dp/1421506183" target="_blank">Buy Claymore
+                Books</a>
+        </div>
+    </section>
+
+    <section class="average-ratings" id="ratings-section">
+        <h2>🔥 Average Ratings by Users</h2>
+        <div class="rating-category">
+            <label>Story:</label>
+            <div id="avg-story" class="stars static" data-score="4.4"></div>
+        </div>
+        <div class="rating-category">
+            <label>Art:</label>
+            <div id="avg-art" class="stars static" data-score="4.5"></div>
+        </div>
+        <div class="rating-category">
+            <label>Characters:</label>
+            <div id="avg-characters" class="stars static" data-score="4.3"></div>
+        </div>
+        <div class="rating-category">
+            <label>Overall:</label>
+            <div id="avg-overall" class="stars static" data-score="4.4"></div>
+        </div>
+    </section>
+
+    <section class="user-review" id="review-section">
+        <h2>🌟 Rate & Review Claymore</h2>
+        <form id="review-form">
+            <div class="rating-input">
+                <label>Story:</label>
+                <div class="stars" data-category="story"></div>
+            </div>
+            <div class="rating-input">
+                <label>Art:</label>
+                <div class="stars" data-category="art"></div>
+            </div>
+            <div class="rating-input">
+                <label>Characters:</label>
+                <div class="stars" data-category="characters"></div>
+            </div>
+            <div class="rating-input">
+                <label>Overall:</label>
+                <div class="stars" data-category="overall"></div>
+            </div>
+
+            <textarea id="comment" rows="4" placeholder="Write your review here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="user-comments">
+        <h2>🗣️ User Comments</h2>
+        <div id="comments-list">
+            <!-- Reviews appear here -->
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Cultured Comic. All Rights Reserved.</p>
+            <p>Follow us on <a href="https://instagram.com/rdeb4barca" target="_blank">
+                    <i class="fab fa-instagram fa-2x" style="color:#E1306C;"></i>
+                </a><a href="https://www.linkedin.com/in/Rahul Deb" target="_blank">
+                    <i class="fab fa-linkedin fa-2x" style="color:#0077B5;"></i>
+                </a>
+            </p>
+            <p>Sharpened by struggle, united by fate ⚔️</p>
+        </div>
+    </footer>
+
+    <script src="../all/all.js"></script>
+</body>
+
+</html>
