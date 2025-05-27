@@ -196,7 +196,18 @@ document.querySelector('a[href="#reviews"]').addEventListener('click', function 
         behavior: 'smooth'
     });
 });
+const contactPopup = document.querySelector('.contact-popup');
 
+contactIcon.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent global click from closing it immediately
+    const isOpen = contactPopup.style.display === 'block';
+    contactPopup.style.display = isOpen ? 'none' : 'block';
+    contactIcon.setAttribute('aria-expanded', !isOpen);
+});
 
-
-
+document.addEventListener('click', (e) => {
+    if (!contactPopup.contains(e.target) && !contactIcon.contains(e.target)) {
+        contactPopup.style.display = 'none';
+        contactIcon.setAttribute('aria-expanded', false);
+    }
+});

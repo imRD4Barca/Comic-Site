@@ -6,49 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cultured Comic</title>
     <link rel="icon" type="image/png" href="glow_only_logo.png">
-    <link rel="stylesheet" href="index1.css" />
+    <link rel="stylesheet" href="index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <!-- Header -->
-    <header>
-        <div class="containers">
-            <a href="#" target="_blank">
-                <h1 class="logo"><img src="glow_only_logo.png" alt="Cultured Comic Logo" class="logo-img">
-                    <span class="logo-txt">Cultured Comic</span>
-                </h1>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" target="_blank">
+                <img src="glow_only_logo.png" class="logo-img" alt="Cultured Comic Logo">
+                <span class="logo-txt">Cultured Comic</span>
             </a>
-            <nav>
-                <ul>
-                    <li><a href="#explore">Explore</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li class="contact-container">
-                        <span class="contact-icon">
-                            Contact
-                        </span>
-                        <div class="contact-popup">
-                            <a href="https://www.instagram.com/rdeb4barca" target="_blank">
-                                <i class="fab fa-instagram"></i> Instagram
-                            </a>
-                            <a href="https://www.linkedin.com/in/Rahul Deb" target="_blank">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                            </a>
-                            <a href="mailto:rdrahuldeb93@gmail.com">
-                                <i class="fas fa-envelope"></i> Gmail
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+            <!-- <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#genres">Genres</a></li>
+            </ul> -->
         </div>
-    </header>
+    </nav>
+
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2>Discover underrated mangas & comics</h2>
+            <h2>Discover underrated mangas, animes & comics</h2>
             <p>Curated gems with reviews, previews, and community votes. Read or Nah?</p>
         </div>
     </section>
@@ -211,21 +196,67 @@
                     <button class="vote-nah">👎 Nah</button>
                 </div>
             </a>
+            <!-- Code Geass Card -->
+            <a href="codegeass/codegeass.html" class="comic-card" target="_blank">
+                <h3>Code Geass</h3>
+                <img src="codegeass/images/code.jpg" alt="Code Geass Cover" />
+                <p>Lelouch gains the power of Geass and leads a rebellion as the masked Zero in a world of mechs, mind
+                    games, and impossible choices.</p>
+                <div class="tags">
+                    <span>Mecha</span>
+                    <span>Psychological</span>
+                    <span>Drama</span>
+                </div>
+                <div class="vote-buttons">
+                    <button class="vote-read">👍 Read</button>
+                    <button class="vote-nah">👎 Nah</button>
+                </div>
+            </a>
+            <!-- Hunter x Hunter Card -->
+            <a href="hxh/hxh.html" class="comic-card" target="_blank">
+                <h3>Hunter x Hunter</h3>
+                <img src="hxh/images/hxh.jpg" alt="Hunter x Hunter Cover" />
+                <p>Gon sets out to find his father and become a Hunter, facing deadly trials, wild adventures, and
+                    unforgettable friends along the way.</p>
+                <div class="tags">
+                    <span>Shonen</span>
+                    <span>Adventure</span>
+                    <span>Fantasy</span>
+                </div>
+                <div class="vote-buttons">
+                    <button class="vote-read">👍 Read</button>
+                    <button class="vote-nah">👎 Nah</button>
+                </div>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Cultured Comic. Made with ❤️ by the realest nerds out here. <i class="fab fa-instagram fa-2x"
-                    style="color:#E1306C;"></i>
-                </a><a href="https://www.linkedin.com/in/Rahul Deb" target="_blank">
-                    <i class="fab fa-linkedin fa-2x" style="color:#0077B5;"></i>
-                </a> </p>
+            <p>&copy; 2025 Cultured Comic. Made with ❤️ by the realest nerds out here.</p><br>
+            <div class="follow">
+                <p> Reach Us on
+                    <a href="https://instagram.com/rdeb4barca" target="_blank" class="insta">
+                        <i class="fab fa-instagram fa-2x" style="color:#E1306C;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/Rahul Deb" target="_blank" class="linkedin">
+                        <i class="fab fa-linkedin fa-2x" style="color:#0077B5;"></i>
+                    </a>
+                    <a href="mailto:rdrahuldeb93@gmail.com" target="_blank" class="mail">
+                        <i class="fas fa-envelope fa-2x social-icon" style="color:#D44638;"></i>
+                    </a>
+
+                    <a href="https://github.com/YourGitHubUsername" target="_blank" class="github">
+                        <i class="fab fa-github fa-2x" style="color:#000;"></i>
+                    </a>
+                </p>
+            </div>
+
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="demo.js"></script>
 </body>
 
 </html>

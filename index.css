@@ -1,3 +1,395 @@
+/* 1. Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* 2. Header */
+header {
+  background: #1f1f1f;
+  padding: 20px 0;
+  border-bottom: 2px solid #444;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #facc15;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo-txt {
+  color: #ff003c;
+  font-size: 2.9rem;
+  font-weight: 900;
+  text-decoration: none;
+  animation: gradientShift 5s ease infinite,
+    bloodDrip 0.6s ease-out forwards,
+    flicker 1s infinite;
+  text-shadow: 0 0 4px red;
+  transition: all 0, 7s ease;
+}
+
+.logo:hover .logo-txt {
+  text-shadow: 0 0 10px red, 0 0 20px darkred;
+  font-size: 3.2rem;
+  transition: all 0.5s ease-in-out;
+  margin-left: 10px;
+  animation: gradientShift 5s ease infinite,
+    bloodDrip 0.6s ease-out forwards,
+    flicker 1s infinite;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0 0 10px red);
+  transition: transform 0.6s ease;
+  margin-top: 1%;
+  gap: auto;
+}
+
+.logo:hover .logo-img {
+  transform: rotate(360deg) scale(-1.5);
+  filter: drop-shadow(0 0 20px red);
+}
+
+.navbar {
+  background-color: #1c1c1c;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 3. Navigation */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+
+nav a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f44336;
+  text-shadow: 0 0 8px red;
+}
+
+/* Mobile Toggle Button */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  color: #f44336;
+  text-shadow: 0 0 8px red;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+/* Responsive Navbar Adjustments */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1c1c1c;
+    text-align: center;
+    margin-top: 10px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-popup {
+    position: static;
+    width: auto;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .contact-popup a {
+    color: #eee;
+  }
+
+  .contact-container:hover .contact-popup {
+    display: block;
+  }
+
+  /* Optional: Center contact links under "Contact" on mobile */
+  .contact-container {
+    text-align: center;
+  }
+}
+
+
+/* 4. Contact/Popup */
+.contact-container {
+  position: relative;
+  display: inline-block;
+}
+
+.contact-icon {
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-icon:hover {
+  color: #f44336;
+  text-shadow: 0 0 5px crimson;
+}
+
+.contact-popup {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 160px;
+}
+
+.contact-popup a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.contact-popup a:hover {
+  text-decoration: underline;
+  color: #1da1f2;
+}
+
+.contact-container:hover .contact-popup {
+  display: block;
+}
+
+/* 5. Hero Section */
+.hero {
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 20px;
+  border-top: 2px solid #444;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #facc15;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+/* 6. Comic Cards Section */
+.comic-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.comic-cards .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+/* Base card style */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.comic-card {
+  display: block;
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px;
+  text-align: center;
+  width: 300px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.comic-card h3 {
+  margin-top: 30px;
+  color: crimson;
+}
+
+.comic-card img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.comic-card p {
+  margin: 10px 0;
+  color: #ccc;
+}
+
+.tags {
+  margin-bottom: 10px;
+}
+
+.tags span {
+  display: inline-block;
+  background: transparent;
+  color: crimson;
+  text-shadow: 0 0 5px crimson;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* 7. Voting Buttons */
+.vote-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.vote-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.vote-read {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.vote-read:hover {
+  background-color: #16a34a;
+}
+
+.vote-nah {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.vote-nah:hover {
+  background-color: #b91c1c;
+}
+
+/* 8. Comic Card Hover Effects */
+.comic-card:hover {
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  box-shadow: 0 0 20px crimson;
+  transform: scale(1.05);
+}
+
+.comic-card:hover h3 {
+  filter: drop-shadow(0 0 20px crimson);
+  animation: flicker 1s infinite;
+}
+
+/* 9. Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #1f1f1f;
+  margin-top: 40px;
+  border-top: 2px solid #444;
+  color: #888;
+}
+
+/* 10. Responsive Styles */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -13,6 +405,7 @@
   }
 }
 
+/* 11. Animations & Keyframes */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -76,298 +469,38 @@
   }
 }
 
-/* Reset some basic stuff */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Base styles */
-body {
-  background-color: #111;
-  color: #eee;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  background: #1f1f1f;
-  padding: 20px 0;
-  border-bottom: 2px solid #444;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #facc15;
-  text-align: center;
-}
-
-.logo {
-  text-decoration: none;
-  margin: 0%;
-  display: inline-flex;
-}
-
-.logo-txt {
-  color: #ff003c;
-  font-size: 2.9rem;
-  font-weight: 900;
-  text-decoration: none;
-  animation: gradientShift 5s ease infinite,
-    bloodDrip 0.6s ease-out forwards,
-    flicker 1s infinite;
-  text-shadow: 0 0 4px red;
-  margin-right: 10px;
-}
-
-.logo:hover .logo-txt {
-  text-shadow: 0 0 10px red, 0 0 20px darkred;
-  animation: gradientShift 5s ease infinite,
-    bloodDrip 0.6s ease-out forwards,
-    flicker 1s infinite;
-}
-
-.logo-img {
-  height: 60px;
-  width: auto;
-  filter: drop-shadow(0 0 10px red);
-  transition: transform 0.6s ease;
-  margin-top: 1%;
-  gap: auto;
-}
-
-.logo:hover .logo-img {
-  transform: rotate(360deg) scale(-1.5);
-  filter: drop-shadow(0 0 20px red);
-}
-
-.containers {
+.follow {
   display: flex;
-  justify-content: space-evenly;
-  vertical-align: middle;
-}
-
-nav ul {
-  display: flex;
-  vertical-align: middle;
-  margin-top: 20px;
-  gap: 20px;
-  list-style: none;
-}
-
-nav a {
-  color: #eee;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #f44336;
-  text-shadow: 0 0 8px red;
-}
-
-.contact-container {
-  position: relative;
-  display: inline-block;
-}
-
-.contact-icon {
-  cursor: pointer;
-  padding: 10px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.contact-icon:hover {
-  color: #f44336;
-  text-shadow: 0 0 5px crimson;
-}
-
-.contact-popup {
-  display: none;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 6px;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 160px;
-}
-
-.contact-popup a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  margin: 5px 0;
-  font-size: 16px;
-}
-
-.contact-popup a:hover {
-  text-decoration: underline;
-  color: #1da1f2;
-}
-
-.contact-container:hover .contact-popup {
-  display: block;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(to right, #1e293b, #0f172a);
-  text-align: center;
-  padding: 40px 0;
-  margin-bottom: 20px;
-  border-top: 2px solid #444;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #facc15;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: #cbd5e1;
-}
-
-
-/* Comic Cards */
-.comic-cards {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
 }
 
-.comic-cards .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 2rem auto;
-  max-width: 1200px;
+.follow a {
+  margin: 0 5px;
 }
 
-/* Base card style */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a.comic-card {
-  display: block;
-  background-color: #1c1c1c;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 15px;
-  text-align: center;
-  width: 300px;
-  color: white;
-  text-decoration: none;
-
-  /* 👇 this line smoothens transform + shadow + border */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
-}
-
-.comic-card h3 {
-  margin-top: 30px;
-  color: crimson;
-}
-
-.comic-card img {
-  max-width: 100%;
-  max-height: 200px;
-  border-radius: 10px;
-}
-
-.comic-card p {
-  margin: 10px 0;
-  color: #ccc;
-}
-
-.tags {
-  margin-bottom: 10px;
-}
-
-.tags span {
-  display: inline-block;
-  /* background: #330000; */
-  background: transparent;
-  /* dark crimson-ish bg */
-  color: crimson;
-  text-shadow: 0 0 5px crimson;
-  padding: 5px 10px;
-  margin-right: 5px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-/* Voting Buttons */
-.vote-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.vote-buttons button {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
+.follow i {
+  transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
 }
 
-.vote-read {
-  background-color: #22c55e;
-  color: #fff;
+.follow i:hover {
+  transform: scale(1.2) translateY(-5px);
+
+  transition: transform 0.5s ease-in-out;
 }
 
-.vote-read:hover {
-  background-color: #16a34a;
+.follow .insta:hover {
+  filter: drop-shadow(0 0 10px #e1306c);
 }
 
-.vote-nah {
-  background-color: #ef4444;
-  color: #fff;
+.follow .linkedin:hover {
+  filter: drop-shadow(0 0 1.2px #1da1f2);
 }
 
-.vote-nah:hover {
-  background-color: #b91c1c;
+.follow .github:hover {
+  filter: drop-shadow(0 0 10px #333);
 }
 
-/* Hover effect per card */
-/* a.comic-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px crimson;
-  border: 0px solid crimson;
-} */
-
-.comic-card:hover {
-  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
-  box-shadow: 0 0 20px crimson;
-  transform: scale(1.05);
-}
-
-.comic-card:hover h3 {
-  filter: drop-shadow(0 0 20px crimson);
-  animation: flicker 1s infinite;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background: #1f1f1f;
-  margin-top: 40px;
-  border-top: 2px solid #444;
-  color: #888;
+.follow .mail:hover {
+  filter: drop-shadow(0 0 2px crimson);
 }

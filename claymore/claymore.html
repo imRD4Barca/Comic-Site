@@ -13,34 +13,23 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="../index.html" class="logo" target="_blank"><img src="../glow_only_logo.png" class="logo-img"
+            <a href="../index.html" class="logo" target="_parent"><img src="../glow_only_logo.png" class="logo-img"
                     alt="Cultured Comic Logo"><span class="logo-txt">Cultured Comic</span> </a>
+            <!-- Mobile Toggle Button -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
             <ul class="nav-links">
-                <li><a href="../index.html" target="_blank">Home</a></li>
-                <li><a href="#extra-info">About</a></li>
+                <li><a href="../index.html" target="_parent">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#extra-info">Characters</a></li>
                 <li><a href="#ratings-section">Reviews</a></li>
                 <li><a href="#genres-section">Genres</a></li>
-                <li class="contact-container">
-                    <span class="contact-icon">
-                        Contact
-                    </span>
-                    <div class="contact-popup">
-                        <a href="https://www.instagram.com/rdeb4barca" target="_blank">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                        <a href="https://www.linkedin.com/in/Rahul Deb" target="_blank">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="mailto:rdrahuldeb93@gmail.com">
-                            <i class="fas fa-envelope"></i> Gmail
-                        </a>
-                    </div>
-                </li>
             </ul>
         </div>
     </nav>
 
-    <header class="main-heading">
+    <header class="main-heading" id="about">
         <h1>Claymore</h1>
     </header>
 
@@ -226,12 +215,19 @@
     <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2025 Cultured Comic. All Rights Reserved.</p>
-            <p>Follow us on <a href="https://instagram.com/rdeb4barca" target="_blank">
-                    <i class="fab fa-instagram fa-2x" style="color:#E1306C;"></i>
-                </a><a href="https://www.linkedin.com/in/Rahul Deb" target="_blank">
-                    <i class="fab fa-linkedin fa-2x" style="color:#0077B5;"></i>
-                </a>
-            </p>
+            <div class="follow">
+                <p> Follow us on
+                    <a href="https://instagram.com/rdeb4barca" target="_blank" class="insta">
+                        <i class="fab fa-instagram fa-2x" style="color:#E1306C;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/Rahul Deb" target="_blank" class="linkedin">
+                        <i class="fab fa-linkedin fa-2x" style="color:#0077B5;"></i>
+                    </a>
+                    <a href="https://github.com/imRD4Barca" target="_blank" class="github">
+                        <i class="fab fa-github fa-2x" style="color:#000;"></i>
+                    </a>
+                </p>
+            </div>
             <p>Sharpened by struggle, united by fate ⚔️</p>
         </div>
     </footer>

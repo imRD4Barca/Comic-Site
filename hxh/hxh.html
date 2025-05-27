@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hunter x Hunter</title>
+    <link rel="stylesheet" href="../all/style.css" />
+    <link rel="icon" type="image/png" href="../glow_only_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" target="_parent"><img src="../glow_only_logo.png" class="logo-img"
+                    alt="Cultured Comic Logo"><span class="logo-txt">Cultured Comic</span> </a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html" target="_parent">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#extra-info">Characters</a></li>
+                <li><a href="#ratings-section">Reviews</a></li>
+                <li><a href="#genres-section">Genres</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="main-heading">
+        <h1>Hunter x Hunter</h1>
+    </header>
+
+    <div class="slideshow-container" id="about">
+        <div class="slide fade">
+            <img src="images/hxh1.webp" alt="Gon sets sail" />
+            <div class="caption">A Hunter’s Journey Begins</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/hxh2.jpg" alt="Gon and Killua friendship" />
+            <div class="caption">Unbreakable Bonds</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/hxh3.jpg" alt="Hisoka's deadly smile" />
+            <div class="caption">Hisoka’s Deadly Game</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/hxh4.jpg" alt="Kurapika's scarlet eyes" />
+            <div class="caption">Scarlet Eyes Awaken</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/hxh6.jpg" alt="Nen showdown" />
+            <div class="caption">Nen Showdown</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/hxh9.jpg" alt="Phantom Troupe" />
+            <div class="caption">The Spiders
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="images/hxh5.jpg" alt="Chimera Ant King Meruem" />
+            <div class="caption">The King’s Arrival</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="images/hxh7.jpg" alt="Gon’s rage transformation" />
+            <div class="caption">Gon’s Rage Unleashed</div>
+        </div>
+        <div class="slide fade">
+            <img src="images/hxh8.jpg" alt="Killua and Alluka" />
+            <div class="caption">A Brother’s Promise</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="images/hxh10.jpg" alt="Ging Freecss revealed" />
+            <div class="caption">Father and Son</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+
+    <section class="description">
+        <p>
+            <strong>Hunter x Hunter</strong> is a legendary shonen manga by <strong>Yoshihiro Togashi</strong>.<br>
+            It follows <strong>Gon Freecss</strong> as he embarks on a quest to find his father and become a Hunter.<br>
+            With mind-bending battles, deep friendships, and a world full of danger and wonder, Hunter x Hunter is a
+            story about growth, ambition, and the true meaning of strength.
+        </p>
+    </section>
+    <!-- Tribute and Extra Info Section -->
+    <div class="extra-info-container" id="extra-info">
+        <!-- Characters Section with Heading -->
+        <div class="character-section">
+            <h2 class="section-heading">Iconic Characters</h2>
+            <div class="characters">
+                <div class="character">
+                    <img src="images/gon.jpg" alt="Gon Freecss">
+                    <p class="char-name">Gon Freecss</p>
+                    <div class="char-desc">An energetic and kind-hearted boy whose relentless optimism drives him to
+                        become a Hunter and find his father.</div>
+                </div>
+                <div class="character">
+                    <img src="images/killua.jpg" alt="Killua Zoldyck">
+                    <p class="char-name">Killua Zoldyck</p>
+                    <div class="char-desc">A prodigy assassin with lightning-fast reflexes, Killua is Gon’s best friend
+                        and loyal companion.</div>
+                </div>
+                <div class="character">
+                    <img src="images/kurapika.jpg" alt="Kurapika">
+                    <p class="char-name">Kurapika</p>
+                    <div class="char-desc">The last of the Kurta Clan, Kurapika seeks vengeance against the Phantom
+                        Troupe for his people’s massacre.</div>
+                </div>
+                <div class="character">
+                    <img src="images/leorio.jpg" alt="Leorio Paradinight">
+                    <p class="char-name">Leorio Paradinight</p>
+                    <div class="char-desc">Aspiring doctor and comic relief, Leorio’s loyalty and courage make him an
+                        irreplaceable friend.</div>
+                </div>
+                <div class="character">
+                    <img src="images/alluka.jpg" alt="Alluka Zoldyck">
+                    <p class="char-name">Alluka Zoldyck</p>
+                    <div class="char-desc">Killua’s mysterious sibling, Alluka’s wish-granting powers are both a
+                        blessing and a curse.</div>
+                </div>
+                <div class="character">
+                    <img src="images/biscuit.jpg" alt="Biscuit Krueger">
+                    <p class="char-name">Biscuit Krueger</p>
+                    <div class="char-desc">Don’t let her looks fool you—Bisky is a master Nen user and a tough mentor to
+                        Gon and Killua.</div>
+                </div>
+                <div class="character">
+                    <img src="images/ging.jpg" alt="Ging Freecss">
+                    <p class="char-name">Ging Freecss</p>
+                    <div class="char-desc">Gon’s elusive father and a legendary Hunter, Ging is a master of adventure
+                        and mystery.</div>
+                </div>
+                <div class="character">
+                    <img src="images/kite.jpg" alt="Kite">
+                    <p class="char-name">Kite</p>
+                    <div class="char-desc">A skilled Hunter and Gon’s mentor, Kite’s calm wisdom and unpredictable
+                        weapon make him a force to be reckoned with.</div>
+                </div>
+                <div class="character">
+                    <img src="images/morel.jpg" alt="Morel Mackernasey">
+                    <p class="char-name">Morel Mackernasey</p>
+                    <div class="char-desc">A veteran Hunter and master strategist, Morel’s smoke-based Nen abilities and
+                        calm under pressure make him a formidable ally in any battle.</div>
+                </div>
+                <div class="character">
+                    <img src="images/feitan.jpg" alt="Feitan Portor">
+                    <p class="char-name">Feitan Portor</p>
+                    <div class="char-desc">The Phantom Troupe’s sadistic interrogator, Feitan is swift, ruthless, and
+                        shrouded in mystery.</div>
+                </div>
+                <div class="character">
+                    <img src="images/nobunaga.jpg" alt="Nobunaga Hazama">
+                    <p class="char-name">Nobunaga Hazama</p>
+                    <div class="char-desc">The Phantom Troupe’s swordsman, Nobunaga’s lightning-fast draw and unwavering
+                        loyalty make him a deadly force among the Spiders.</div>
+                </div>
+                <div class="character">
+                    <img src="images/uvogin.jpg" alt="Uvogin">
+                    <p class="char-name">Uvogin</p>
+                    <div class="char-desc">A powerhouse of the Phantom Troupe, Uvogin’s brute strength and love of
+                        battle make him nearly unstoppable in close combat.</div>
+                </div>
+                <div class="character">
+                    <img src="images/illumi.jpg" alt="Illumi Zoldyck">
+                    <p class="char-name">Illumi Zoldyck</p>
+                    <div class="char-desc">A master manipulator and assassin, Illumi’s cold logic and needle techniques
+                        make him one of the most dangerous Zoldycks.</div>
+                </div>
+                <div class="character">
+                    <img src="images/hisoka.jpg" alt="Hisoka">
+                    <p class="char-name">Hisoka</p>
+                    <div class="char-desc">A deadly magician obsessed with strong opponents, Hisoka’s motives are as
+                        mysterious as his powers.</div>
+                </div>
+                <div class="character">
+                    <img src="images/chrollo.jpg" alt="Chrollo Lucilfer">
+                    <p class="char-name">Chrollo Lucilfer</p>
+                    <div class="char-desc">The enigmatic leader of the Phantom Troupe, Chrollo is a genius strategist
+                        and formidable foe.</div>
+                </div>
+                <div class="character">
+                    <img src="images/pitou.jpg" alt="Neferpitou">
+                    <p class="char-name">Neferpitou</p>
+                    <div class="char-desc">A Royal Guard of the Chimera Ant King, Pitou’s catlike curiosity hides
+                        terrifying strength and loyalty.</div>
+                </div>
+                <div class="character">
+                    <img src="images/pouf.jpg" alt="Shaiapouf">
+                    <p class="char-name">Shaiapouf</p>
+                    <div class="char-desc">The butterfly Royal Guard, Pouf is fiercely devoted to the King and will do
+                        anything to protect him—even at the cost of his own sanity.</div>
+                </div>
+                <div class="character">
+                    <img src="images/youpi.jpg" alt="Menthuthuyoupi">
+                    <p class="char-name">Menthuthuyoupi</p>
+                    <div class="char-desc">The powerhouse Royal Guard, Youpi’s monstrous rage and adaptability make him
+                        a nearly unstoppable force on the battlefield.</div>
+                </div>
+                <div class="character">
+                    <img src="images/zeno.jpg" alt="Zeno Zoldyck">
+                    <p class="char-name">Zeno Zoldyck</p>
+                    <div class="char-desc">Killua’s grandfather and a legendary assassin, Zeno’s experience and mastery
+                        of Nen make him a force to be feared.</div>
+                </div>
+                <div class="character">
+                    <img src="images/netero.jpg" alt="Isaac Netero">
+                    <p class="char-name">Isaac Netero</p>
+                    <div class="char-desc">The legendary Chairman of the Hunter Association, Netero’s strength, speed,
+                        and spirit are unmatched even in his old age.</div>
+                </div>
+                <div class="character">
+                    <img src="images/meruem.jpg" alt="Meruem">
+                    <p class="char-name">Meruem</p>
+                    <div class="char-desc">The Chimera Ant King, Meruem is a symbol of overwhelming power and evolving
+                        humanity.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yoshihiro Togashi -->
+        <div class="tribute-section">
+            <img src="images/togashi.jpg" alt="Yoshihiro Togashi">
+            <h3 class="char-name">Yoshihiro Togashi</h3>
+            <p class="mangaka-permanent-desc">
+                The creator of Hunter x Hunter, known for his brilliant storytelling, complex characters, and
+                unpredictable plot twists.<br>
+                Togashi’s work has inspired countless fans and set new standards for shonen manga.
+            </p>
+            <div class="mangaka-desc">
+                <strong>Yoshihiro Togashi</strong> is the author and artist of <strong>Hunter x Hunter</strong>, which
+                began serialization in 1998 and has become a beloved classic.<br>
+                The manga inspired a hit anime adaptation, movies, and a passionate global fanbase.<br>
+                Togashi is celebrated for his creativity, depth, and the emotional impact of his stories.<br>
+                <br>
+                <p><u>In the words of <strong>Togashi</strong>:</u></p>
+                <blockquote>
+                    <strong>"The world is not perfect, but it’s there for us trying the best it can. That’s what makes
+                        it so damn beautiful."</strong>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- Genre and Links -->
+    <section class="below-characters">
+        <div class="genres" id="genres-section">
+            <h3>📚 Genre:</h3>
+            <p> Shonen, Adventure, Fantasy, Action, Psychological </p>
+            <p><strong>Hunter x Hunter</strong> began serialization in <strong>1998</strong>.</p>
+            <p><em>Status:</em> Ongoing</p>
+            <p><strong>Chapters Published:</strong> 390+</p>
+            <p><strong>Anime Adaptations:</strong><br> Hunter x Hunter (1999), Hunter x Hunter (2011)</p>
+        </div>
+
+        <div class="links">
+            <h3>📖 Where to Read / Watch:</h3>
+            <a href="https://ww5.readhxh.com/ " target="_blank">Read Hunter x Hunter
+                Online</a><br>
+            <a href="https://www.amazon.com/Hunter-x-Hunter-Vol-1/dp/1421501694" target="_blank">Buy Hunter x Hunter
+                Books</a><br>
+            <a href="https://www.crunchyroll.com/series/GY3VKX1MR/hunter-x-hunter" target="_blank">Watch Hunter x Hunter
+                Anime</a>
+        </div>
+    </section>
+
+    <section class="average-ratings" id="ratings-section">
+        <h2>🔥 Average Ratings by Users</h2>
+        <div class="rating-category">
+            <label>Story:</label>
+            <div id="avg-story" class="stars static" data-score="4.8"></div>
+        </div>
+        <div class="rating-category">
+            <label>Art:</label>
+            <div id="avg-art" class="stars static" data-score="4.5"></div>
+        </div>
+        <div class="rating-category">
+            <label>Characters:</label>
+            <div id="avg-characters" class="stars static" data-score="4.9"></div>
+        </div>
+        <div class="rating-category">
+            <label>Overall:</label>
+            <div id="avg-overall" class="stars static" data-score="4.9"></div>
+        </div>
+    </section>
+
+    <section class="user-review" id="review-section">
+        <h2>🌟 Rate & Review Hunter x Hunter</h2>
+        <form id="review-form">
+            <div class="rating-input">
+                <label>Story:</label>
+                <div class="stars" data-category="story"></div>
+            </div>
+            <div class="rating-input">
+                <label>Art:</label>
+                <div class="stars" data-category="art"></div>
+            </div>
+            <div class="rating-input">
+                <label>Characters:</label>
+                <div class="stars" data-category="characters"></div>
+            </div>
+            <div class="rating-input">
+                <label>Overall:</label>
+                <div class="stars" data-category="overall"></div>
+            </div>
+
+            <textarea id="comment" rows="4" placeholder="Write your review here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="user-comments">
+        <h2>🗣️ User Comments</h2>
+        <div id="comments-list">
+            <!-- Reviews appear here -->
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Cultured Comic. All Rights Reserved.</p>
+            <div class="follow">
+                <p> Follow us on
+                    <a href="https://instagram.com/rdeb4barca" target="_blank" class="insta">
+                        <i class="fab fa-instagram fa-2x" style="color:#E1306C;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/Rahul Deb" target="_blank" class="linkedin">
+                        <i class="fab fa-linkedin fa-2x" style="color:#0077B5;"></i>
+                    </a>
+                    <a href="https://github.com/imRD4Barca" target="_blank" class="github">
+                        <i class="fab fa-github fa-2x" style="color:#000;"></i>
+                    </a>
+                </p>
+            </div>
+            <p>Built with Gon’s rage and Killua’s loyalty⚡🖤</p>
+        </div>
+    </footer>
+
+    <script src="../all/all.js"></script>
+</body>
+
+</html>
