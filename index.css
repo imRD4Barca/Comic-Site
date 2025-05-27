@@ -135,11 +135,6 @@ nav {
 
 /* Responsive Navbar Adjustments */
 @media (max-width: 768px) {
-  .navbar {
-    position: static;
-    /* or 'relative' */
-  }
-
   .nav-container {
     flex-direction: column;
     align-items: center;
@@ -198,6 +193,15 @@ nav {
   /* Optional: Center contact links under "Contact" on mobile */
   .contact-container {
     text-align: center;
+  }
+
+  .logo .logo-txt {
+    opacity: 1;
+    margin-left: 10px;
+    transform: translateX(0);
+    animation: slideInLogoText 1.2s ease-out forwards, headingDrip 0.6s ease-out forwards, flicker 1.2s infinite;
+    margin-left: 10px;
+
   }
 }
 
@@ -471,6 +475,22 @@ footer {
 
   80% {
     opacity: 0.95;
+  }
+}
+
+@keyframes scaleRotateLogo {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  /* 50% {
+        transform: scale(-1.5) rotate(180deg);
+        filter: drop-shadow(0 0 15px red);
+    } */
+
+  100% {
+    transform: scale(-1.7) rotate(360deg);
+    filter: drop-shadow(0 0 15px red);
   }
 }
 
