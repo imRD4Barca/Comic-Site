@@ -41,17 +41,17 @@ header h1 {
     bloodDrip 0.6s ease-out forwards,
     flicker 1s infinite;
   text-shadow: 0 0 4px red;
-  transition: all 0, 7s ease;
 }
 
 .logo:hover .logo-txt {
   text-shadow: 0 0 10px red, 0 0 20px darkred;
   font-size: 3.2rem;
-  transition: all 0.5s ease-in-out;
+
   margin-left: 10px;
   animation: gradientShift 5s ease infinite,
     bloodDrip 0.6s ease-out forwards,
     flicker 1s infinite;
+  transition: all 0.5s ease-in-out;
 }
 
 .logo-img {
@@ -135,6 +135,11 @@ nav {
 
 /* Responsive Navbar Adjustments */
 @media (max-width: 768px) {
+  .navbar {
+    position: static;
+    /* or 'relative' */
+  }
+
   .nav-container {
     flex-direction: column;
     align-items: center;
