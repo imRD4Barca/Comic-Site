@@ -257,13 +257,16 @@ body {
         opacity: 1;
         margin-left: 10px;
         transform: translateX(0);
-        animation: headingDrip 0.6s ease-out forwards, flicker 1.2s infinite;
+        animation: slideInLogoText 1.2s ease-out forwards, headingDrip 0.6s ease-out forwards, flicker 1.2s infinite;
+        margin-left: 10px;
+
     }
 
     .logo .logo-img {
         border-radius: 20px;
         filter: drop-shadow(0 0 20px red);
-        animation: flicker 1.2s infinite, rotateLogo 2s linear infinite;
+        transform: scale(-1.5);
+        animation: flicker 1.2s infinite, scaleRotateLogo 1s ease-out forwards;
     }
 }
 
@@ -794,6 +797,59 @@ button:hover {
         transform: translateY(0);
         opacity: 1;
         filter: blur(0);
+    }
+}
+
+@keyframes scaleRotateLogo {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    /* 50% {
+        transform: scale(-1.5) rotate(180deg);
+        filter: drop-shadow(0 0 15px red);
+    } */
+
+    100% {
+        transform: scale(-1.7) rotate(360deg);
+        filter: drop-shadow(0 0 15px red);
+    }
+}
+
+@keyframes slideInLogoText {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0);
+    }
+
+    10% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
     }
 }
 
