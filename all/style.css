@@ -252,6 +252,19 @@ body {
         max-height: fit-content;
 
     }
+
+    .logo .logo-txt {
+        opacity: 1;
+        margin-left: 10px;
+        transform: translateX(0);
+        animation: headingDrip 0.6s ease-out forwards, flicker 1.2s infinite;
+    }
+
+    .logo .logo-img {
+        border-radius: 20px;
+        filter: drop-shadow(0 0 20px red);
+        animation: flicker 1.2s infinite, rotateLogo 2s linear infinite;
+    }
 }
 
 /* 3. Heading & Description */

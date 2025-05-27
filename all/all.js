@@ -211,3 +211,23 @@ document.addEventListener('click', (e) => {
         contactIcon.setAttribute('aria-expanded', false);
     }
 });
+// Swipe support for mobile slideshow
+const slideshow = document.querySelector(".slideshow-container");
+let startX = 0;
+let endX = 0;
+
+if (slideshow) {
+    slideshow.addEventListener("touchstart", (e) => {
+        startX = e.changedTouches[0].screenX;
+    });
+
+    slideshow.addEventListener("touchend", (e) => {
+        endX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (endX < startX - 30) plusSlides(1);     // swipe left → next
+        else if (endX > startX + 30) plusSlides(-1); // swipe right → prev
+    }
+}
