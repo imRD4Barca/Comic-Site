@@ -688,12 +688,18 @@ h1 {
 }
 
 .star.half-filled {
-    background: linear-gradient(90deg, #f44336 50%, #bbb 50%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
     position: relative;
+    color: #bbb;
+}
+
+.star.half-filled::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #f44336;
+    text-shadow: 0 0 5px crimson;
 }
 
 .average-ratings .stars.static {
