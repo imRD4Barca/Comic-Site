@@ -105,7 +105,14 @@ document.querySelectorAll(".average-ratings .stars.static").forEach((container) 
 });
 
 // STORE REVIEWS
-const allReviews = [];
+const savedReviews = localStorage.getItem("culturedComicReviews");
+const allReviews = savedReviews ? JSON.parse(savedReviews) : [];
+
+// Render saved reviews on load
+allReviews.forEach((review) => {
+    renderReview(review);
+});
+updateAverageRatings();
 
 // On form submit
 document.getElementById("review-form").addEventListener("submit", (e) => {
@@ -139,6 +146,9 @@ document.getElementById("review-form").addEventListener("submit", (e) => {
         comment,
     };
     allReviews.push(review);
+    localStorage.setItem("culturedComicReviews", JSON.stringify(allReviews));
+    renderReview(review);
+
 
     // Render review
     renderReview(review);
