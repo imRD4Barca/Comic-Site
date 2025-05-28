@@ -37,9 +37,6 @@ header h1 {
   font-size: 2.9rem;
   font-weight: 900;
   text-decoration: none;
-  animation: gradientShift 5s ease infinite,
-    bloodDrip 0.6s ease-out forwards,
-    flicker 1s infinite;
   text-shadow: 0 0 4px red;
 }
 
@@ -82,177 +79,17 @@ header h1 {
 }
 
 
-/* 3. Navigation */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  font-size: 18px;
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-
-nav a {
-  color: #eee;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #f44336;
-  text-shadow: 0 0 8px red;
-}
-
-/* Mobile Toggle Button */
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-}
-
-.menu-toggle:hover {
-  color: #f44336;
-  text-shadow: 0 0 8px red;
-  transform: scale(1.2);
-  transition: all 0.5s ease;
-}
 
 /* Responsive Navbar Adjustments */
 @media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    margin-top: 10px;
-    align-self: center;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #1c1c1c;
-    text-align: center;
-    margin-top: 10px;
-    border-top: 1px solid #333;
-    padding-top: 10px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-popup {
-    position: static;
-    width: auto;
-    box-shadow: none;
-    background-color: transparent;
-    padding: 0;
-  }
-
-  .contact-popup a {
-    color: #eee;
-  }
-
-  .contact-container:hover .contact-popup {
-    display: block;
-  }
-
-  /* Optional: Center contact links under "Contact" on mobile */
-  .contact-container {
-    text-align: center;
-  }
 
   .logo .logo-txt {
-    opacity: 1;
-    margin-left: 10px;
-    transform: translateX(0);
-    animation: slideInLogoText 1.2s ease-out forwards, headingDrip 0.6s ease-out forwards, flicker 1.2s infinite;
-    margin-left: 10px;
-
+    animation: slideInLogoText 1.2s ease-out forwards, flicker 1.5s infinite;
   }
-}
 
-
-/* 4. Contact/Popup */
-.contact-container {
-  position: relative;
-  display: inline-block;
-}
-
-.contact-icon {
-  cursor: pointer;
-  padding: 10px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.contact-icon:hover {
-  color: #f44336;
-  text-shadow: 0 0 5px crimson;
-}
-
-.contact-popup {
-  display: none;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 6px;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 160px;
-}
-
-.contact-popup a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  margin: 5px 0;
-  font-size: 16px;
-}
-
-.contact-popup a:hover {
-  text-decoration: underline;
-  color: #1da1f2;
-}
-
-.contact-container:hover .contact-popup {
-  display: block;
+  .logo .logo-img {
+    animation: flicker 1.5s infinite, scaleRotateLogo 1.2s ease-out forwards;
+  }
 }
 
 /* 5. Hero Section */
@@ -480,7 +317,7 @@ footer {
 
 @keyframes scaleRotateLogo {
   0% {
-    transform: scale(1) rotate(0deg);
+    transform: scale(0) rotate(0deg);
   }
 
   /* 50% {
@@ -494,9 +331,23 @@ footer {
   }
 }
 
+@keyframes slideInLogoText {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .follow {
   display: flex;
   justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .follow a {
