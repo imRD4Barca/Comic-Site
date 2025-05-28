@@ -70,13 +70,25 @@ document.querySelectorAll(".user-review .stars").forEach((container) => {
 function setStaticStars(container, score) {
     container.innerHTML = "";
 
+    const full = Math.floor(score);
+    let roundedFull = full;
+    let hasHalf = false;
+
+    const decimal = score - full;
+
+    if (decimal >= 0.75) {
+        roundedFull++;
+    } else if (decimal >= 0.25) {
+        hasHalf = true;
+    }
+
     for (let i = 1; i <= 5; i++) {
         const star = document.createElement("span");
         star.classList.add("star");
 
-        if (i <= Math.floor(score)) {
+        if (i <= roundedFull) {
             star.classList.add("filled");
-        } else if (i === Math.floor(score) + 1 && score % 1 >= 0.25) {
+        } else if (hasHalf && i === roundedFull + 1) {
             star.classList.add("half-filled");
         }
 
