@@ -680,6 +680,9 @@ h1 {
     font-size: 28px;
     color: #bbb;
     position: relative;
+    display: inline-block;
+    width: 1em;
+    text-align: center;
 }
 
 .star.filled {

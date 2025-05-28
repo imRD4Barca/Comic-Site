@@ -68,14 +68,23 @@ document.querySelectorAll(".user-review .stars").forEach((container) => {
 
 // Generate stars for static average ratings
 function setStaticStars(container, score) {
-    const stars = [];
+    container.innerHTML = "";
+
     for (let i = 1; i <= 5; i++) {
-        if (i <= Math.floor(score)) stars.push("★");
-        else if (i === Math.ceil(score) && score % 1 >= 0.5) stars.push("⯪");
-        else stars.push("☆");
+        const star = document.createElement("span");
+        star.classList.add("star");
+
+        if (i <= Math.floor(score)) {
+            star.classList.add("filled");
+        } else if (i === Math.floor(score) + 1 && score % 1 >= 0.25) {
+            star.classList.add("half-filled");
+        }
+
+        star.textContent = "★";
+        container.appendChild(star);
     }
-    container.textContent = stars.join("");
 }
+
 
 // Set initial average rating stars
 document.querySelectorAll(".average-ratings .stars.static").forEach((container) => {
